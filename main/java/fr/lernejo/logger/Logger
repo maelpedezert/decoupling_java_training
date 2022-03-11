@@ -1,0 +1,7 @@
+void log(String message);
+public class ConsoleLogger implements Logger {
+	System.out.println(message);
+}
+public static class LoggerFactory implements Logger {
+    getLogger(String name);
+}
