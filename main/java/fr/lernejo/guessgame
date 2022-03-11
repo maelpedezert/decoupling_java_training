@@ -1,0 +1,20 @@
+package fr.lernejo.guessgame;
+public class Player {
+   private final static int max = 100;
+   
+   public static void HumanPlayer(String[] args) {
+      int nombre = (int)(Math.random() * max) + 1; // to guess
+      Console.println("I choose a number between 1 and " + max);
+      Console.println("Try to guess !");
+      int proposition, nbPropositions = 0;
+      do {
+         proposition = Console.readInt();
+         nbPropositions++;
+         if(proposition < nombre)
+            Console.println("Greater !");
+         else if(proposition > nombre)
+            Console.println("Lower !");
+      } while(proposition != nombre);
+      Console.println("True !");
+   }
+}
